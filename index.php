@@ -14,20 +14,13 @@
 </head>
 <body>
 
-<a href="login.php"> Login </a>
+<a href="login.php"> Login <a/>
+<br>
+<br>
+<a href="product.php"> Product list <a/>
 
 <!-- to connect to db from html file after include dbHandler.php, we just need to use "$conn;" -->
 <!-- example of selecting data from db-->
-<?php
-    $sql = "SELECT * FROM supplier; ";
-    $result = mysqli_query($conn, $sql);
-    $resultCheck = mysqli_num_rows($result);
-    if ($resultCheck > 0){
-        while ($row = mysqli_fetch_assoc($result)){
-            echo $row['idsupplier'];
-        }
-    }
-?>
 
 </body>
 </html>
