@@ -43,6 +43,7 @@
             }
             echo "</table>";
     }
+    mysqli_close($con);
 ?>
 
 </body>
