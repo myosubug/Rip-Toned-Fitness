@@ -14,7 +14,7 @@
 </head>
 <body>
 
-<a href="login.php"> Login <\a>
+<a href="login.php"> Login </a>
 
 <!-- to connect to db from html file after include dbHandler.php, we just need to use "$conn;" -->
 <!-- example of selecting data from db-->
