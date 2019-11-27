@@ -156,8 +156,8 @@
         echo "<table border='1'>
                 <tr>
                 <th>Supplier Name</th>
-                <th>City</th>
                 <th>Phone Number</th>
+                <th>City</th>
                 </tr>";
 
             while ($row = mysqli_fetch_array($result)){
