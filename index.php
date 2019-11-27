@@ -18,7 +18,7 @@
 <header>
     <div class = "container">
 		<nav>
-			<a href = "x.html">Products</a>
+			<a href = "product.php">Products</a>
 			<a href = "x.html">About</a>
 			<a href = "x.html">Contact</a>
 			<div id = "branding">
@@ -36,36 +36,6 @@
     <div class="container">
     </div>
 </section>
-	
-<h3>Product list</h3>
-
-
-
-<?php
-    $sql = "SELECT quantity, name, price FROM product; ";
-    $result = mysqli_query($conn, $sql);
-    $resultCheck = mysqli_num_rows($result);
-    if ($resultCheck > 0){
-        echo "<table border='1'>
-                <tr>
-                <th>Name</th>
-                <th>Price</th>
-                <th>Quantity</th>
-                </tr>";
-
-            while ($row = mysqli_fetch_array($result)){
-                echo "<tr>";
-                echo "<td>" . $row['name'] . "</td>";
-                echo "<td>" . $row['price'] . "</td>";
-                echo "<td>" . $row['quantity'] . "</td>";
-                //echo "<td><a href='update.php?ID= " . $row['ID'] . "'>Update</a></td>";
-                //echo "<td><a onClick= \"return confirm('Do you want to delete this user?')\" href='view.php?job=delete&amp;ID= " . $row['ID'] . "'>DELETE</a></td>";
-                echo "</tr>";
-            }
-            echo "</table>";
-    }
-    mysqli_close($conn);
-?>
 
 <!-- to connect to db from html file after include dbHandler.php, we just need to use "$conn;" -->
 <!-- example of selecting data from db-->
