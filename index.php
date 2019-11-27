@@ -10,17 +10,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Test Shop</title>
+    <title>Rip Toned Fitness LTD | Welcome</title>
+    <link rel="stylesheet" href="css/index_stylesheet.css">
 </head>
 <body>
 
-<a href="login.php"> Login <a/>
-<br>
-<br>
+<header>
+    <div class = "container">
+		<nav>
+			<a href = "x.html">Temp</a>
+			<a href = "x.html">Temp</a>
+			<a href = "x.html">Temp</a>
+			<div id = "branding">
+				<h1><span class = "highlight">Rip Toned </span>Fitness LTD</h1>
+			</div>
+			<a href = "login.php">Customer Login</a>
+			<a href = "x.html">Temp</a>
+			<a href = "x.html">Temp</a>
+        </nav>
+    </div>
+</header>
 
-<h1>Welcome to test shop!</h1>
-
+	
+<section id = "showcase">
+    <div class="container">
+    </div>
+</section>
+	
 <h3>Product list</h3>
+
 
 
 <?php
