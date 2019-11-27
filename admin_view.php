@@ -128,8 +128,8 @@
     if ($resultCheck > 0){
         echo "<table border='1'>
                 <tr>
-                <th>User Name</th>
                 <th>Email</th>
+                <th>User Name</th>
                 </tr>";
 
             while ($row = mysqli_fetch_array($result)){
