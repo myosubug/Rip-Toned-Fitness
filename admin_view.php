@@ -17,6 +17,7 @@
 
 <!-- to connect to db from html file after include dbHandler.php, we just need to use "$conn;" -->
 <!-- example of selecting data from db-->
+<div style="float: left;">
 <h3>Product list</h3>
 
 <?php
@@ -44,7 +45,8 @@
     }
     
 ?>
-
+<br>
+<br>
 <form action="add_product.php?job=post" method="post">
    Product ID: <input type="text" name="idproduct"><br>
    Name: <input type="text" name="name"><br>
@@ -113,9 +115,66 @@
    Employee Username: <input type="text" name="username"><br>
    <input type="submit" value="Delete Employee">
 </form>
+</div>
+<br>
+<br>
+<div style="float: left;">
+<h3>Customer list</h3>
 
-<br>
-<br>
+<?php
+    $sql = "SELECT username, email FROM customer; ";
+    $result = mysqli_query($conn, $sql);
+    $resultCheck = mysqli_num_rows($result);
+    if ($resultCheck > 0){
+        echo "<table border='1'>
+                <tr>
+                <th>User Name</th>
+                <th>Email</th>
+                </tr>";
+
+            while ($row = mysqli_fetch_array($result)){
+                echo "<tr>";
+                echo "<td>" . $row['email'] . "</td>";
+                echo "<td>" . $row['username'] . "</td>";
+                //echo "<td><a href='update_product.php?ID= " . $row['ID'] . "'>Update</a></td>";
+                //echo "<td><a onClick= \"return confirm('Do you want to delete this user?')\" href='view.php?job=delete&amp;ID= " . $row['ID'] . "'>DELETE</a></td>";
+                echo "</tr>";
+            }
+            echo "</table>";
+    }
+    
+?>
+
+<h3>Supplier list</h3>
+
+
+<?php
+    $sql = "SELECT name, city, phonenumber FROM supplier; ";
+    $result = mysqli_query($conn, $sql);
+    $resultCheck = mysqli_num_rows($result);
+    if ($resultCheck > 0){
+        echo "<table border='1'>
+                <tr>
+                <th>Supplier Name</th>
+                <th>City</th>
+                <th>Phone Number</th>
+                </tr>";
+
+            while ($row = mysqli_fetch_array($result)){
+                echo "<tr>";
+                echo "<td>" . $row['name'] . "</td>";
+                echo "<td>" . $row['phonenumber'] . "</td>";
+                echo "<td>" . $row['city'] . "</td>";
+                //echo "<td><a href='update_product.php?ID= " . $row['ID'] . "'>Update</a></td>";
+                //echo "<td><a onClick= \"return confirm('Do you want to delete this user?')\" href='view.php?job=delete&amp;ID= " . $row['ID'] . "'>DELETE</a></td>";
+                echo "</tr>";
+            }
+            echo "</table>";
+    }
+    
+?>
+
+
 
 <h3>Courier list</h3>
 
@@ -143,6 +202,6 @@
     }
     mysqli_close($conn);
 ?>
-
+</div>
 </body>
 </html>
