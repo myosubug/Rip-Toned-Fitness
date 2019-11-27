@@ -18,9 +18,9 @@
 <header>
     <div class = "container">
 		<nav>
-			<a href = "x.html">Temp</a>
-			<a href = "x.html">Temp</a>
-			<a href = "x.html">Temp</a>
+			<a href = "x.html">Products</a>
+			<a href = "x.html">About</a>
+			<a href = "x.html">Contact</a>
 			<div id = "branding">
 				<h1><span class = "highlight">Rip Toned </span>Fitness LTD</h1>
 			</div>
