@@ -24,9 +24,9 @@
 			<div id = "branding">
 				<h1><span class = "highlight">Rip Toned </span>Fitness LTD</h1>
 			</div>
-			<a href = "login.php">Customer Login</a>
-			<a href = "x.html">Temp</a>
-			<a href = "x.html">Temp</a>
+			<a href = "login.php">Customer</a>
+			<a href = "x.html">Employee</a>
+			<a href = "x.html">Admin</a>
         </nav>
     </div>
 </header>
