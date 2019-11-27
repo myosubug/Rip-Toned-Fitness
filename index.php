@@ -22,7 +22,7 @@
 			<a href = "x.html">About</a>
 			<a href = "x.html">Contact</a>
 			<div id = "branding">
-				<h1><span class = "highlight">Rip Toned </span>Fitness LTD</h1>
+                <a href = "index.php"><h1><span class = "highlight">Rip Toned </span>Fitness LTD</h1></a>
 			</div>
 			<a href = "login.php">Customer</a>
 			<a href = "x.html">Employee</a>

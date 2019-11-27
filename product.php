@@ -14,7 +14,21 @@
     <link rel="stylesheet" href="css/index_stylesheet.css">
 </head>
 <body>
-
+<header>
+    <div class = "container">
+		<nav>
+			<a href = "product.php">Products</a>
+			<a href = "x.html">About</a>
+			<a href = "x.html">Contact</a>
+			<div id = "branding">
+                <a href = "index.php"><h1><span class = "highlight">Rip Toned </span>Fitness LTD</h1></a>
+			</div>
+			<a href = "login.php">Customer</a>
+			<a href = "x.html">Employee</a>
+			<a href = "x.html">Admin</a>
+        </nav>
+    </div>
+</header>
 	
 <section id = "showcase">
     <div class="container">
