@@ -20,7 +20,7 @@
 		<nav>
 			<a href = "product.php">Products</a>
 			<a href = "x.html">About</a>
-			<a href = "x.html">Contact</a>
+			<a href = "contact.html">Contact</a>
 			<div id = "branding">
                 <a href = "index.php"><h1><span class = "highlight">Rip Toned </span>Fitness LTD</h1></a>
 			</div>

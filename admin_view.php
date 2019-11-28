@@ -174,6 +174,35 @@
     
 ?>
 
+<h3>Messages from customers</h3>
+
+
+<?php
+    $sql = "SELECT customerusername, messagecontent FROM timestamp; ";
+    $result = mysqli_query($conn, $sql);
+    $resultCheck = mysqli_num_rows($result);
+    if ($resultCheck > 0){
+        echo "<table border='1'>
+                <tr>
+                <th>User Name</th>
+                <th>Message</th>
+                </tr>";
+
+            while ($row = mysqli_fetch_array($result)){
+                echo "<tr>";
+                echo "<td>" . $row['customerusername'] . "</td>";
+                echo "<td>" . $row['messagecontent'] . "</td>";
+                //echo "<td><a href='update_product.php?ID= " . $row['ID'] . "'>Update</a></td>";
+                //echo "<td><a onClick= \"return confirm('Do you want to delete this user?')\" href='view.php?job=delete&amp;ID= " . $row['ID'] . "'>DELETE</a></td>";
+                echo "</tr>";
+            }
+            echo "</table>";
+    }
+    
+?>
+
+<br>
+<br>
 
 
 <h3>Courier list</h3>
@@ -202,6 +231,7 @@
     }
     mysqli_close($conn);
 ?>
+
 </div>
 </body>
 </html>
