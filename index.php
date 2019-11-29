@@ -26,7 +26,7 @@
 			</div>
 			<a href = "login.php">Customer</a>
 			<a href = "x.html">Employee</a>
-			<a href = "x.html">Admin</a>
+			<a href = "admin_login.php">Admin</a>
         </nav>
     </div>
 </header>

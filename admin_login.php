@@ -25,7 +25,7 @@
     </div>
 </header>
 
-<form action="include/login.inc.php" method="POST">
+<form action="include/admin_login.inc.php" method="POST">
 	<div>
 		<input type="text" name="username" required placeholder="username">
 	</div>
@@ -36,10 +36,6 @@
 		<button type="submit" name="submit">Login</button>
 	</div>
 </form>
-
-<div class = "register">
-	<a href="customer_registration.php"> Not a customer? Sign up now! </a>
-</div>
 
 </body>
 </html>

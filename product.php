@@ -25,14 +25,13 @@
 			</div>
 			<a href = "login.php">Customer</a>
 			<a href = "x.html">Employee</a>
-			<a href = "x.html">Admin</a>
+			<a href = "admin_login.php">Admin</a>
         </nav>
     </div>
 </header>
 
-<section id = "showcase">
-    <div class="container">
-    <h3>Product list</h3>
+
+<h3>Product list</h3>
 
 
 
@@ -61,8 +60,7 @@
     }
     mysqli_close($conn);
 ?>
-    </div>
-</section>
+    
 	
 
 
