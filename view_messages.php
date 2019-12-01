@@ -17,7 +17,7 @@
     <div class = "container">
 		<nav>
 			<div id = "branding">
-                <a href = "employee_view.php"><h1><span class = "highlight">Rip Toned </span>Fitness LTD</h1></a>
+                <a href = "customer_home.php"><h1><span class = "highlight">Rip Toned </span>Fitness LTD</h1></a>
 			</div>
 			<a href = "index.php">Sign Out</a>
         </nav>
@@ -28,7 +28,9 @@
 	session_start();
 	$myUser = $_SESSION['loggedInUser'];	
 
-    $sql = "SELECT * FROM timestamp WHERE sender != 'riptonedsupport';";
+	$name = mysqli_real_escape_string($conn, $myUser['username']);
+
+    $sql = "SELECT * FROM timestamp WHERE recipient = '$name';";
     $result = mysqli_query($conn, $sql);
 	
 	if(!$result) {
@@ -59,9 +61,9 @@
     mysqli_close($conn);
 ?>
 
-<form action="include/employee_send_message.inc.php" method="POST">
+<form action="include/send_message.inc.php" method="POST">
 	<div>
-		<input type="text" name="username" required placeholder="Customer Username">
+		<input type="text" name="username" required placeholder="Username">
 	</div>
 	<div>
 		<textarea name = "message" required placeholder = "Reply (256 character max)" rows = "5" cols = "100" maxlength = "255"></textarea>

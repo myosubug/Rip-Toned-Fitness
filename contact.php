@@ -25,15 +25,15 @@
     </div>
 </header>
 
-<form action="include/admin_login.inc.php" method="POST">
+<form action="include/send_message.inc.php" method="POST">
 	<div>
-		<input type="text" name="username" required placeholder="username">
+		<input type="text" name="username" required placeholder="Username">
 	</div>
 	<div>
-		<input type="password" name="password" required placeholder="password">
+		<textarea name = "message" required placeholder = "Message (256 character max)" rows = "5" cols = "100" maxlength = "255"></textarea>
 	</div>
 	<div>
-		<button type="submit" name="submit">Login</button>
+		<button type="submit" name="submit">Send message</button>
 	</div>
 </form>
 

@@ -5,6 +5,7 @@ body{
   margin:0;
   background-color: #d90c09;
   background:url('../img/redgradient.png');
+  text-align: center
 }
 
 /* GlOBAL */
@@ -68,4 +69,20 @@ header a:hover{
   text-align:center;
   color:#fff;
   opacity:0.75;
+}
+
+.title {
+	font-size: 30px;
+}
+
+.text {
+	color: black
+	font-size: 15px;
+	line-height: 1.5cm;
+	background-color: #ffffff;
+	padding: 10px;
+	border-color: black;
+	border-width: 2px;
+	border-style: solid;
+	margin: 30px;
 }

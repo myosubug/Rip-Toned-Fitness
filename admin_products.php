@@ -11,21 +11,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Rip Toned Fitness LTD | Welcome</title>
-    <link rel="stylesheet" href="css/customer_home.css">
+    <link rel="stylesheet" href="css/admin.css">
 </head>
 <body>
 <header>
     <div class = "container">
 		<nav>
-			<a href = "product.php">Products</a>
-			<a href = "about.php">About</a>
-			<a href = "contact.php">Contact</a>
+			<a href = "admin_products.php">Products</a>
+			<a href = "admin_customers.php">Customers</a>
+			<a href = "admin_suppliers.php">Suppliers</a>
 			<div id = "branding">
-                <a href = "index.php"><h1><span class = "highlight">Rip Toned </span>Fitness LTD</h1></a>
+                <a href = "admin_view.php"><h1><span class = "highlight">Rip Toned </span>Fitness LTD</h1></a>
 			</div>
-			<a href = "login.php">Customer</a>
-			<a href = "employee_login.php">Employee</a>
-			<a href = "admin_login.php">Admin</a>
+			<a href = "admin_couriers.php">Couriers</a>
+			<a href = "admin_employees.php">Employees</a>
+			<a href = "admin_messages.php">Messages</a>	
+			<a href = "index.php">Signout</a>
         </nav>
     </div>
 </header>
@@ -50,10 +51,21 @@
 		<a href = "addtocart.php?idproduct=<?php echo $product['idproduct']; ?> role="button">Add to Cart</a>
 	</div>
 <?php } ?>
+
+<h3 style = "text-align: center">Add a product</h3>
     
-	
+<form action="add_product.php?job=post" method="post">
+  <input type="text" name="idproduct" required placeholder = "Product ID"><br>
+  <input type="text" name="name" required placeholder = "Product Name"><br>
+  <input type="text" name="quantity" required placeholder = "Product Quantity"><br>
+  <input type="text" name="price" required placeholder = "Product Price"><br>
+   <input type="submit" value="Add product">
+</form>
 
-
+<form action="delete_product.php?job=post" method="post">
+   <input type="text" name="idproduct" required placeholder = "Product ID"><br>
+   <input type="submit" value="Delete Product">
+</form>
 <!-- to connect to db from html file after include dbHandler.php, we just need to use "$conn;" -->
 <!-- example of selecting data from db-->
 

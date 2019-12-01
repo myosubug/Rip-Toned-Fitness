@@ -25,7 +25,7 @@
     </div>
 </header>
 
-<form action="include/admin_login.inc.php" method="POST">
+<form action="include/employee_login.inc.php" method="POST">
 	<div>
 		<input type="text" name="username" required placeholder="username">
 	</div>

@@ -17,6 +17,7 @@
     <div class = "container">
 		<nav>
 			<a href = "cart.php">View Cart</a>
+			<a href = "view_messages.php"> My Messages </a>
 			<div id = "branding">
                 <a href = "customer_home.php"><h1><span class = "highlight">Rip Toned </span>Fitness LTD</h1></a>
 			</div>

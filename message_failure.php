@@ -25,17 +25,9 @@
     </div>
 </header>
 
-<form action="include/admin_login.inc.php" method="POST">
-	<div>
-		<input type="text" name="username" required placeholder="username">
-	</div>
-	<div>
-		<input type="password" name="password" required placeholder="password">
-	</div>
-	<div>
-		<button type="submit" name="submit">Login</button>
-	</div>
-</form>
+	<p style = "color: white" >
+		Something went wrong sorry...
+	</p>
 
 </body>
 </html>
