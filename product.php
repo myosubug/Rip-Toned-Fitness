@@ -47,7 +47,6 @@
 		<div class = "product_price">
 			<h3>$<?php echo $product['price'] ?></h3>
 		</div>
-		<a href = "addtocart.php?idproduct=<?php echo $product['idproduct']; ?> role="button">Add to Cart</a>
 	</div>
 <?php } ?>
     

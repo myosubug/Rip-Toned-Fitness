@@ -48,17 +48,17 @@
 		<div class = "product_price">
 			<h3>$<?php echo $product['price'] ?></h3>
 		</div>
-		<a href = "addtocart.php?idproduct=<?php echo $product['idproduct']; ?> role="button">Add to Cart</a>
 	</div>
 <?php } ?>
 
 <h3 style = "text-align: center">Add a product</h3>
     
-<form action="add_product.php?job=post" method="post">
+<form action="add_product.php?job=post" method="post" enctype="multipart/form-data">
   <input type="text" name="idproduct" required placeholder = "Product ID"><br>
   <input type="text" name="name" required placeholder = "Product Name"><br>
   <input type="text" name="quantity" required placeholder = "Product Quantity"><br>
   <input type="text" name="price" required placeholder = "Product Price"><br>
+  <input type="file" name="fileToUpload" id="fileToUpload"><br>
    <input type="submit" value="Add product">
 </form>
 
