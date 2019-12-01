@@ -5,19 +5,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rip Toned Fitness LTD | Login</title>
+    <link rel="stylesheet" href="css/customer_home.css">
 </head>
 <body>
 
+<header>
+    <div class = "container">
+		<nav>
+			<a href = "cart.php">View Cart</a>
+			<div id = "branding">
+                <a href = "customer_home.php"><h1><span class = "highlight">Rip Toned </span>Fitness LTD</h1></a>
+			</div>
+			<a href = "index.php">Sign Out</a>
+        </nav>
+    </div>
+</header>
+
 <?php
 	session_start();
-	$myUser = $_SESSION['loggedInUser'];
-	echo $myUser['email'];
-	
-	
+	$myUser = $_SESSION['loggedInUser'];	
 ?>
 
-<h3>Product list</h3>
+<div class = "welcome">
+	<h3>Welcome <?php echo $myUser['username']; ?>!</h3>
+</div>
 
 
 
@@ -27,11 +42,15 @@
 ?>
 
 <?php while($product = mysqli_fetch_assoc($result)){ ?>
-	<div>
+	 <div class = "product_thumbnail">
 		<img src = "<?php echo $product['image']; ?>">
-		<h3><?php echo $product['name'] ?></h3>
-		<h3><?php echo $product['price'] ?></h3>
-		<a href = "addtocart.php?id=<?php echo $product[id]; ?> role="button">Add to Cart</a>
+		<div class = "product_name">
+			<h3><?php echo $product['name'] ?></h3>
+		</div>
+		<div class = "product_price">
+			<h3>$<?php echo $product['price'] ?></h3>
+		</div>
+		<a href = "addtocart.php?idproduct=<?php echo $product['idproduct']; ?> role="button">Add to Cart</a>
 	</div>
 <?php } ?>
 

@@ -8,7 +8,7 @@
 	$user = $_POST['username'];
 	$pass = $_POST['password'];
 
-	$sql = "SELECT email FROM customer WHERE username=? 
+	$sql = "SELECT * FROM customer WHERE username=? 
 			AND password=?;";
 	$stmt = mysqli_stmt_init($conn);
 	if(!mysqli_stmt_prepare($stmt, $sql)){
