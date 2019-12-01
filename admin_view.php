@@ -145,6 +145,40 @@
     
 ?>
 
+
+
+<h3>Current order list</h3>
+
+<?php
+    $sql = "SELECT idorder, orderdate, couriername, customerusername, shippingdate, trackingid FROM `order`; ";
+    $result = mysqli_query($conn, $sql);
+    $resultCheck = mysqli_num_rows($result);
+    if ($resultCheck > 0){
+        echo "<table border='1'>
+                <tr>
+                <th>Orer ID</th>
+                <th>Courier Name</th>
+                <th>Customer Username</th>
+                <th>Order Date</th>
+                <th>Shipping Date</th>
+                <th>Tracking ID</th>
+                </tr>";
+
+            while ($row = mysqli_fetch_array($result)){
+                echo "<tr>";
+                echo "<td>" . $row['idorder'] . "</td>";
+                echo "<td>" . $row['couriername'] . "</td>";
+                echo "<td>" . $row['customerusername'] . "</td>";
+                echo "<td>" . $row['orderdate'] . "</td>";
+                echo "<td>" . $row['shippingdate'] . "</td>";
+                echo "<td>" . $row['trackingid'] . "</td>";
+                echo "</tr>";
+            }
+            echo "</table>";
+    }
+    
+?>
+
 <h3>Supplier list</h3>
 
 
@@ -232,6 +266,7 @@
     mysqli_close($conn);
 ?>
 
+<a href="index.php"> Go back to main <a/>
 </div>
 </body>
 </html>
