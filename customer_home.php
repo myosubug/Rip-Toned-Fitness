@@ -16,11 +16,12 @@
 <header>
     <div class = "container">
 		<nav>
-			<a href = "cart.php">View Cart</a>
-			<a href = "view_messages.php"> My Messages </a>
+			<a href = "customer_home.php">Products</a>
+			<a href = "view_messages.php"> Messages </a>
 			<div id = "branding">
                 <a href = "customer_home.php"><h1><span class = "highlight">Rip Toned </span>Fitness LTD</h1></a>
 			</div>
+			<a href = "cart.php">View Cart</a>
 			<a href = "index.php">Sign Out</a>
         </nav>
     </div>
@@ -51,7 +52,7 @@
 		<div class = "product_price">
 			<h3>$<?php echo $product['price'] ?></h3>
 		</div>
-		<a href = "addtocart.php?idproduct=<?php echo $product['idproduct']; ?> role="button">Add to Cart</a>
+		<a href = "addtocart.php?idproduct=<?php echo $product['idproduct'];?> role="button">Add to Cart</a>
 	</div>
 <?php } ?>
 

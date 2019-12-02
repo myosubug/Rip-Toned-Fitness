@@ -16,11 +16,12 @@
 <header>
     <div class = "container">
 		<nav>
-			<a href = "cart.php">View Cart</a>
-			<a href = "view_messages.php"> My Messages </a>
+			<a href = "customer_home.php">Products</a>
+			<a href = "view_messages.php"> Messages </a>
 			<div id = "branding">
                 <a href = "customer_home.php"><h1><span class = "highlight">Rip Toned </span>Fitness LTD</h1></a>
 			</div>
+			<a href = "cart.php">View Cart</a>
 			<a href = "index.php">Sign Out</a>
         </nav>
     </div>
@@ -32,9 +33,9 @@
 	$username = $myUser['username'];
 	
 ?>
-
+<div class = "welcome">
 <h3>Cart</h3>
-
+</div>
 
 
 <?php
@@ -60,6 +61,26 @@
 		<a href = "removefromcart.php?idproduct=<?php echo $product['idproduct']; ?> role="button">Remove From Cart</a>
 	</div>
 <?php } ?>
+
+<?php
+	$getPriceSql = "SELECT totalprice FROM cart WHERE customerusername = ?;";
+	$getPriceStmt = mysqli_stmt_init($conn);
+	if(!mysqli_stmt_prepare($getPriceStmt, $getPriceSql)){
+		echo "get price statement failed";
+	}
+	else{
+		mysqli_stmt_bind_param($getPriceStmt, "s", $username);
+		mysqli_stmt_execute($getPriceStmt);
+		$result = mysqli_stmt_get_result($getPriceStmt);
+		$priceArray = mysqli_fetch_assoc($result);
+		$totalPrice = $priceArray['totalprice'];
+		?>
+		<div class = "welcome">
+			<h3>Total: $<?php echo $totalPrice; ?> </h3>
+		</div>
+		<?php
+	}
+?>
 
 </body>
 </html>
