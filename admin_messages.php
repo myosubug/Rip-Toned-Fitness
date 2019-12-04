@@ -65,7 +65,7 @@
     mysqli_close($conn);
 ?>
 
-<form action="include/employee_send_message.inc.php" method="POST">
+<form action="include/send_message_admin.inc.php" method="POST">
 	<div>
 		<input type="text" name="username" required placeholder="Customer Username">
 	</div>

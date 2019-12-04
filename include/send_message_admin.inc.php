@@ -1,4 +1,5 @@
 
+
 <?php
 	include_once 'dbHandler.php';
 	session_start();	
@@ -17,10 +18,10 @@
 		mysqli_stmt_bind_param($stmt, "ssss", $sender, $date, $message, $recipient);
 		
 		if(mysqli_stmt_execute($stmt)){
-			header("Location: ../message_success_employee.php?Message=success");	
+			header("Location: ../message_success_admin.php?Message=success");	
 		}
 		else{
-			header("Location: ../message_failure_employee.php?Message=failure");	
+			header("Location: ../message_failure_admin.php?Message=failure");	
 		}
 	}
 	
