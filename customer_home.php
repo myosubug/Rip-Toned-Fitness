@@ -53,7 +53,14 @@
 		<div class = "product_price">
 			<h3>$<?php echo $product['price'] ?></h3>
 		</div>
-		<a href = "addtocart.php?idproduct=<?php echo $product['idproduct'];?> role="button">Add to Cart</a>
+		<?php
+			if($product['quantity'] > 0){
+				?><a href = "addtocart.php?idproduct=<?php echo $product['idproduct'];?> role="button">Add to Cart</a><?php
+			}
+			else{
+				?><a href = "customer_home.php">Out Of Stock</a><?php
+			}
+		?>
 	</div>
 <?php } ?>
 

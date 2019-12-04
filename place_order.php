@@ -80,6 +80,16 @@
 ?>
 
 <?php
+	$sql = "UPDATE product SET quantity = quantity - 1 WHERE idproduct = ? and quantity > 0;";
+	$stmt = mysqli_stmt_init($conn);
+	if(!mysqli_stmt_prepare($stmt, $sql)){
+		echo "SQL statement failed";
+	}
+	mysqli_stmt_bind_param($stmt, "i", $productid);
+	mysqli_stmt_execute($stmt);
+?>
+
+<?php
 	$sql = "DELETE FROM productfills WHERE customerusername = ?; ";
 	$stmt = mysqli_stmt_init($conn);
 	if(!mysqli_stmt_prepare($stmt, $sql)){
