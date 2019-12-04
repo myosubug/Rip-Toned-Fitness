@@ -17,11 +17,12 @@
     <div class = "container">
 		<nav>
 			<a href = "customer_home.php">Products</a>
-			<a href = "view_messages.php"> Messages </a>
+			<a href = "view_messages_customer.php"> Messages </a>
 			<div id = "branding">
                 <a href = "customer_home.php"><h1><span class = "highlight">Rip Toned </span>Fitness LTD</h1></a>
 			</div>
 			<a href = "cart.php">View Cart</a>
+			<a href = "orders.php">View Orders</a>
 			<a href = "index.php">Sign Out</a>
         </nav>
     </div>

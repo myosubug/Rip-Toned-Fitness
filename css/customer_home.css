@@ -112,6 +112,13 @@ header a:hover{
 
 .welcome{
 	text-align: center;
-	font-size:30px;
+	justify-content:left;
+	font-size:20px;
+	color: #fff;
+}
+
+.order{
+	text-align: center;
+	font-size:20px;
 	color: #fff;
 }
