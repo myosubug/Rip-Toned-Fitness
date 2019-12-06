@@ -16,12 +16,17 @@ if (mysqli_connect_errno($con))
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
   }
   
-  $sql = "INSERT INTO employee (username, firstname, lastname, email, adminusername, password) VALUES ('". $username."','". $firstname."','". $lastname."','". $email ."','". $adminusername ."','". $password ."')";
+  $sql = "INSERT INTO employee (username, firstname, lastname, email, adminusername, password) VALUES (?,?,?,?,?,?);";
+  
  
- if (!mysqli_query($con,$sql))
-  {
-  die('Error: ' . mysqli_error($con));
-  }
+	$stmt = mysqli_stmt_init($con);
+	if(!mysqli_stmt_prepare($stmt, $sql)){
+		echo "SQL statement failed";
+	}
+	else{		
+		mysqli_stmt_bind_param($stmt, "ssssss", $username, $firstname, $lastname, $email, $adminusername, $password);
+		mysqli_stmt_execute($stmt);
+	}
   
 echo "1 record added";
 

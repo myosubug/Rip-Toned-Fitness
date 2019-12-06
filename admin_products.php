@@ -45,6 +45,7 @@
 		<div class = "product_name">
 			<h3><?php echo $product['name'] ?></h3>
 		</div>
+		<h3>id: <?php echo $product['idproduct'] ?> amt: <?php echo $product['quantity'] ?></h3>
 		<div class = "product_price">
 			<h3>$<?php echo $product['price'] ?></h3>
 		</div>

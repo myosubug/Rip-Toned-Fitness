@@ -11,12 +11,16 @@ if (mysqli_connect_errno($con))
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
   }
   
-  $sql = "INSERT INTO timestamp (customerusername, messagecontent) VALUES ('". $username."','". $messagecontent ."')";
+  $sql = "INSERT INTO timestamp (customerusername, messagecontent) VALUES (?,?);";
  
- if (!mysqli_query($con,$sql))
-  {
-  die('Error: ' . mysqli_error($con));
-  }
+$stmt = mysqli_stmt_init($con);
+	if(!mysqli_stmt_prepare($stmt, $sql)){
+		echo "SQL statement failed";
+	}
+	else{		
+		mysqli_stmt_bind_param($stmt, "ss", $username, $messagecontent);
+		mysqli_stmt_execute($stmt);
+	}	
   
 echo "message sent!";
 

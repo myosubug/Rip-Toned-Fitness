@@ -12,13 +12,17 @@ if (mysqli_connect_errno($con))
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
   }
   
-$sql = "DELETE FROM employee WHERE username='$username'";
+$sql = "DELETE FROM employee WHERE username= ?;";
  
- if (mysqli_query($con,$sql)){
-    echo "1 record deleted";
-} else {
-    die('Error: ' . mysqli_error($con));
-}
+ $stmt = mysqli_stmt_init($con);
+	if(!mysqli_stmt_prepare($stmt, $sql)){
+		echo "SQL statement failed";
+	}
+	else{		
+		mysqli_stmt_bind_param($stmt, "s", $username);
+		mysqli_stmt_execute($stmt);
+		echo "1 record removerd";
+	}	
   
 
 

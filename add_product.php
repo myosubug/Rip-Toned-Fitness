@@ -42,16 +42,27 @@ if (mysqli_connect_errno($con))
   }
   
   if($uploadOk == 1){
-	$sql = "INSERT INTO product (idproduct, name, quantity, price, image) VALUES ('". $idproduct."','". $name."','". $quantity ."','". $price ."','". $target_file ."')";  
+	$sql = "INSERT INTO product (idproduct, name, quantity, price, image) VALUES (?,?,?,?,?);";  
+	$stmt = mysqli_stmt_init($con);
+	if(!mysqli_stmt_prepare($stmt, $sql)){
+		echo "SQL statement failed";
+	}
+	else{		
+		mysqli_stmt_bind_param($stmt, "isids", $idproduct, $name, $quantity, $price, $target_file );
+		mysqli_stmt_execute($stmt);
+	}
   }
   
   else{
-	$sql = "INSERT INTO product (idproduct, name, quantity, price) VALUES ('". $idproduct."','". $name."','". $quantity ."','". $price ."')";  
-  }
- 
- if (!mysqli_query($con,$sql))
-  {
-  die('Error: ' . mysqli_error($con));
+	$sql = "INSERT INTO product (idproduct, name, quantity, price) VALUES (?,?,?,?);";  
+	$stmt = mysqli_stmt_init($con);
+	if(!mysqli_stmt_prepare($stmt, $sql)){
+		echo "SQL statement failed";
+	}
+	else{		
+		mysqli_stmt_bind_param($stmt, "isids", $idproduct, $name, $quantity, $price);
+		mysqli_stmt_execute($stmt);
+	}	
   }
   
 echo "1 record added";
