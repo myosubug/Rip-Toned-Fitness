@@ -1,4 +1,4 @@
-# php-sql-website
+# Rip Toned Fitness LTD.
 
 This is a hypothetical example of an e-commerce website that can 
 
