@@ -7,7 +7,7 @@ sell products by taking orders from customer,
 message between admin/customer/employee.
 
 # Live demo
-https://riptoned.000webhostapp.com/
+[go](https://riptoned.000webhostapp.com/){:target="_blank" rel="noopener"} 
 
 in detail, 
 
