@@ -7,7 +7,9 @@ sell products by taking orders from customer,
 message between admin/customer/employee.
 
 # Live demo
-[go](https://riptoned.000webhostapp.com/){:target="_blank" rel="noopener"} 
+[go](https://riptoned.000webhostapp.com/ "checkkk"){:target="_blank"} 
+
+[adjustable](http://google.com "Giiidd"){:target="_blank"}
 
 in detail, 
 
