@@ -7,11 +7,11 @@ sell products by taking orders from customer,
 message between admin/customer/employee.
 
 # Live demo
-[go](https://riptoned.000webhostapp.com/ "checkkk"){:target="_blank"} 
 
-[adjustable](http://google.com "Giiidd"){:target="_blank"}
+<a href="https://riptoned.000webhostapp.com/" target="_blank">https://riptoned.000webhostapp.com/</a>
 
-in detail, 
+
+In detail, 
 
 * can create account for customer/employee/admin.
 * can view/use different functionalities based on user type.
