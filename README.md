@@ -6,6 +6,9 @@ manage products,
 sell products by taking orders from customer,
 message between admin/customer/employee.
 
+# Live demo
+https://riptoned.000webhostapp.com/
+
 in detail, 
 
 * can create account for customer/employee/admin.
