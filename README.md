@@ -8,8 +8,8 @@ message between admin/customer/employee.
 
 # Live demo
 
-<a href="https://riptoned.000webhostapp.com/" target="_blank">https://riptoned.000webhostapp.com/</a>
-temporary login/password for administrator on this example is:
+<a href="https://riptoned.000webhostapp.com/" target="_blank">https://riptoned.000webhostapp.com/</a>  
+temporary login/password for administrator on this example is (from admin login tab):
 * login : admin
 * password : admin
 
