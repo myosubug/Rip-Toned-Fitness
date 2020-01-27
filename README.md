@@ -16,7 +16,8 @@ temporary login/password for administrator on this example is (from admin login 
 with this account, you can create employee account and view/send messages between customers and staff, add/delete product.
 Or you can just try to create customer account to place an order (from customer tab).  
 
-In detail, 
+
+In detail, this web site:   
 
 * can create account for customer/employee/admin.
 * can view/use different functionalities based on user type.
